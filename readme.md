@@ -2,7 +2,7 @@
 # dogecoin
 ------------------------------------------------
 
-±¾¹¤¾ßÓÃÀ´Ëæ»úÉú³É¹·¹·±ÒµÄË½Ô¿¡¢µØÖ·ºÍÖú¼Ç´Ê£¬Éú³É¹ý³Ì¿É¶ÏÍøÀëÏß²Ù×÷¡£
+æœ¬å·¥å…·ç”¨æ¥éšæœºç”Ÿæˆç‹—ç‹—å¸çš„ç§é’¥ã€åœ°å€å’ŒåŠ©è®°è¯ï¼Œç”Ÿæˆè¿‡ç¨‹å¯æ–­ç½‘ç¦»çº¿æ“ä½œã€‚
 
 
 ``` js
@@ -15,7 +15,7 @@ let data = await generate('my message');
 
 console.log(data);
 
-//´òÓ¡³öÀàËÆÕâÑù½á¹¹£º
+//æ‰“å°å‡ºç±»ä¼¼è¿™æ ·ç»“æž„ï¼š
 {
   address: 'DDqipiW34cJVge3FVGmvbnzZkDT5f4KHCg',
   privateKey: 'QVzxUTKDRaSyRYqXbn9VTdezutXGYXZawQ1gwgUusbYYmESsSCwh',

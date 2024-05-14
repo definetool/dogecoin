@@ -1,6 +1,6 @@
 {
     "name": "@definetool/dogecoin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "module",
     "description": "离线随机生成狗狗币的私钥和对应的地址与助记词。",
     "main": "index.js",
