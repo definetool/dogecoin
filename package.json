@@ -1,0 +1,24 @@
+{
+    "name": "@definetool/dogecoin",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "离线随机生成狗狗币的私钥和对应的地址与助记词。",
+    "main": "index.js",
+    "scripts": {
+       
+    },
+    "keywords": ["dogecoin", "狗狗币", "私钥", "助记词"],
+    "author": "micty",
+    "email": "mictydeng@qq.com",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/definetool/dogecoin.git"
+    },
+    "dependencies": {
+        "@noble/secp256k1": "^1.7.1",
+        "bip32": "^4.0.0",
+        "bip39": "^3.1.0",
+        "bitcoinjs-lib": "^6.1.0"
+    }
+}
