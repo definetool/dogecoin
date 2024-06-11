@@ -1,10 +1,15 @@
 
 
-import generate from './index.js';
+import { generate, generateSync, } from './index.js';
 
 
 
-let data = await generate('my message.');
+// let data = generate('my message');
+let data = generateSync('my message');
 
 console.log(data);
+
+
+
+
 

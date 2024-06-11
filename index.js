@@ -1,7 +1,7 @@
 
 import * as bitcoin from 'bitcoinjs-lib';
 import { BIP32Factory, } from 'bip32';
-import { generateMnemonic, mnemonicToSeed, } from 'bip39';
+import { generateMnemonic, mnemonicToSeed, mnemonicToSeedSync, } from 'bip39';
 import eccObj from './utils/ecc.js';
 import defaults from './defaults.js';
 
@@ -37,8 +37,45 @@ async function generate(messagePrefix) {
         address,
         privateKey,
         mnemonic,
+
+        // master,
+        // keypair,
+        // doge_data,
+    };
+}
+
+function generateSync(messagePrefix) {
+    let { path, network, } = defaults;
+
+    if (messagePrefix !== undefined) {
+        network = { messagePrefix, ...network, };
+    }
+
+
+    let mnemonic = generateMnemonic(); //助记词。
+    let seed = mnemonicToSeedSync(mnemonic);
+    let master = bip32Obj.fromSeed(seed, network);
+    let keypair = master.derivePath(path);
+
+    let doge_data = bitcoin.payments.p2pkh({
+        'pubkey': keypair.publicKey,
+        'network': network,
+    });
+
+    let address = doge_data.address;
+    let privateKey = keypair.toWIF();
+
+
+    return {
+        address,
+        privateKey,
+        mnemonic,
+
+        // master,
+        // keypair,
+        // doge_data,
     };
 }
 
 
-export default generate;
+export { generate, generateSync, };
